@@ -25,9 +25,9 @@ public class EmployeeService {
 	// List<Employee> employee=repository.findAll();
 	// return (Employee) employee;
 	// }
-	public List findAll() {
+	public List<Employee> findAll() {
 		List<Employee> employee = repository.findAll();
-		return (List) employee;
+		return employee;
 	}
 
 	public Optional<Employee> findById(long id) {

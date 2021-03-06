@@ -20,13 +20,13 @@ import com.springdemo.SpringApp.service.EmployeeService;
 @RestController
 @RequestMapping("/api/v1")
 public class EmployeeController {
+	
 	@Autowired
 	EmployeeService employeeservice;
 
-	// private EmployeeRepository employeerepository;
 	@GetMapping("/employee")
-	public List getAllEmployees() {
-		return (List) employeeservice.findAll();
+	public List<Employee> getAllEmployees() {
+		return employeeservice.findAll();
 	}
 
 	@PostMapping("/employee")
